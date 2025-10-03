@@ -1,0 +1,11 @@
+# Rasa temporary/cache files
+.rasa/cache/
+.rasa/models/
+
+# Python virtual environment
+rasa_env_updated/
+
+# OS files
+*.pyc
+__pycache__/
+.DS_Store

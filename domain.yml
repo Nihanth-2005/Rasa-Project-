@@ -1,0 +1,57 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_joke
+  - ask_weather
+  - ask_name
+  - ask_time
+  - process_doc
+
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_ask_name:
+    - text: "I am your Rasa assistant, nice to meet you!"
+
+  utter_ask_time:
+    - text: "Let me check the time for you..."
+
+  utter_ask_joke:
+    - text: "Why don’t programmers like nature? Because it has too many bugs 🐛😂"
+
+  utter_ask_weather:
+    - text: "I can’t fetch live weather yet 🌦️, but you can check your weather app!"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - action_tell_time
+  - action_process_document
+
