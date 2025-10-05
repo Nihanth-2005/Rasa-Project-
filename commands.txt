@@ -1,0 +1,40 @@
+💻 **Rasa Bot – Quick Command Reference**
+
+──────────────────────────────
+▶ Activate Virtual Environment
+──────────────────────────────
+./rasa_env_updated/Scripts/Activate
+# Start working in your Rasa environment.
+
+──────────────────────────────
+🔎 Check Rasa & Python Version
+──────────────────────────────
+python -m rasa --version
+# Shows Rasa version, Python version, and environment info.
+
+──────────────────────────────
+⚙ Run Actions Server
+──────────────────────────────
+python -m rasa run actions
+# Run this in a separate terminal.
+# Necessary for custom actions (actions.py) to work.
+
+──────────────────────────────
+💬 Start Bot Shell
+──────────────────────────────
+python -m rasa shell
+# Chat with your bot interactively.
+# Type '/stop' to exit the conversation.
+
+──────────────────────────────
+📊 Test NLU Model
+──────────────────────────────
+python -m rasa test nlu --nlu data/test.yml
+# Generates evaluation metrics: accuracy, precision, recall, F1-score.
+# Check the 'results/' folder for detailed reports.
+
+──────────────────────────────
+⚡ Optional: Suppress Warnings
+──────────────────────────────
+python -W ignore -m rasa test nlu --nlu data/test.yml
+# Clean output without SQLAlchemy or Deprecation warnings.
